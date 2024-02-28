@@ -7,11 +7,19 @@ import { createPinia } from 'pinia'
 import App from './App.vue'
 import router from './router'
 import VeeValidatePlugin from './includes/validation'
-import './includes/firebase'
-const app = createApp(App)
+import { auth } from './includes/firebase'
 
-app.use(createPinia())
-app.use(router)
-app.use(VeeValidatePlugin, { foo: 'hello' })
+let app
 
-app.mount('#app')
+auth.onAuthStateChanged(() => {
+  //check if app is undefined and only initialize the app if undefined
+  if (!app) {
+    app = createApp(App)
+
+    app.use(createPinia())
+    app.use(router)
+    app.use(VeeValidatePlugin, { foo: 'hello' })
+
+    app.mount('#app')
+  }
+})

@@ -1,5 +1,6 @@
 import firebase from 'firebase/app'
 import 'firebase/auth'
+import 'firebase/firestore'
 
 const firebaseConfig = {
   apiKey: 'AIzaSyDNZWvcCUph7snr9pEicOTWtDci8EMHChw',
@@ -11,4 +12,12 @@ const firebaseConfig = {
   measurementId: 'G-KW5WRKKPT4'
 }
 
-export default firebase.initializeApp(firebaseConfig)
+firebase.initializeApp(firebaseConfig)
+
+const auth = firebase.auth() // This will be reusable reference so that we don't call this multiple times in our app
+
+const db = firebase.firestore()
+
+const usersCollection = db.collection('users')
+
+export { auth, db, usersCollection }
