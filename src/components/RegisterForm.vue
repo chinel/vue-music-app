@@ -92,8 +92,9 @@
 
     <button
       type="submit"
-      class="block w-full bg-purple-600 text-white py-1.5 px-3 rounded transition hover:bg-purple-700"
+      class="block w-full text-white py-1.5 px-3 rounded transition"
       :disabled="reg_in_submission"
+      :class="btnStateClass"
     >
       Submit
     </button>
@@ -101,6 +102,8 @@
 </template>
 
 <script>
+import { mapActions } from 'pinia'
+import useUserStore from '@/stores/user'
 export default {
   name: 'RegisterForm',
   data() {
@@ -125,19 +128,42 @@ export default {
       reg_alert_msg: ''
     }
   },
+  computed: {
+    // ...mapWritableState(useUserStore, ['userLoggedIn']), // this is called registering the state
+    btnStateClass() {
+      return this.reg_in_submission ? 'bg-purple-600/50 cursor-none' : 'bg-purple-600'
+    }
+  },
   methods: {
-    register(values) {
+    ...mapActions(useUserStore, {
+      createUser: 'register'
+    }), // this is called registering the state
+
+    async register(values) {
       this.reg_show_alert = true
       this.reg_in_submission = true
       this.reg_alert_variant = 'bg-blue-500'
       this.reg_alert_msg = 'Please wait! Your account is being created.'
 
-      setTimeout(() => {
-        this.reg_alert_msg = 'Success! Your account has been created'
-        this.reg_alert_variant = 'bg-green-500'
-        this.reg_show_alert = false
-        console.log(values)
-      }, 6000)
+      try {
+        await this.createUser(values)
+      } catch (error) {
+        this.reg_in_submission = false
+        this.reg_alert_variant = 'bg-red-500'
+        const errorCode = error.code
+        if (errorCode == 'auth/email-already-in-use') {
+          this.reg_alert_msg = 'This account already exist.'
+        } else {
+          this.reg_alert_msg = 'An unexpected error occured. Please try again later.'
+        }
+
+        return
+      }
+
+      this.userLoggedIn = true
+      this.reg_alert_msg = 'Success! Your account has been created'
+      this.reg_alert_variant = 'bg-green-500'
+      window.location.reload()
     }
   }
 }
