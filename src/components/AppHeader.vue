@@ -4,13 +4,18 @@
     <nav class="container mx-auto flex justify-between items-center py-5 px-4">
       <!-- App Name -->
       <div>
-        <router-link class="text-white font-bold uppercase text-2xl mr-4" to="/">Music</router-link>
+        <router-link
+          class="text-white font-bold uppercase text-2xl mr-4"
+          :to="{ name: 'home' }"
+          exact-active-class="no-active"
+          >Music</router-link
+        >
       </div>
       <div class="flex items-center">
         <!-- Primary Navigation -->
         <ul class="flex flex-row mt-1">
           <li>
-            <router-link class="px-2 text-white" to="/about">About</router-link>
+            <router-link class="px-2 text-white" :to="{ name: 'about' }">About</router-link>
           </li>
           <!-- Navigation Links -->
           <li v-if="!userStore.userLoggedIn">
@@ -20,7 +25,7 @@
           </li>
           <template v-else>
             <li>
-              <router-link class="px-2 text-white" to="/manage">Manage</router-link>
+              <router-link class="px-2 text-white" :to="{ name: 'manage' }">Manage</router-link>
             </li>
             <li>
               <a class="px-2 text-white" href="#" @click.prevent="userStore.signout">Logout</a>
