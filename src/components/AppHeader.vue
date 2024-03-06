@@ -28,7 +28,7 @@
               <router-link class="px-2 text-white" :to="{ name: 'manage' }">Manage</router-link>
             </li>
             <li>
-              <a class="px-2 text-white" href="#" @click.prevent="userStore.signout">Logout</a>
+              <a class="px-2 text-white" href="#" @click.prevent="signOut">Logout</a>
             </li>
           </template>
         </ul>
@@ -52,6 +52,14 @@ export default {
     toggleAuthModal() {
       this.isOpen = !this.isOpen
       console.log(this.isOpen)
+    },
+    signOut() {
+      this.userStore.signout() //using the mapstores approach
+      if (this.$route.meta.requiresAuth) {
+        this.$router.push({
+          name: 'home'
+        })
+      }
     }
   }
 }
