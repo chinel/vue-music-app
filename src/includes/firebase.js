@@ -19,6 +19,8 @@ const auth = firebase.auth() // This will be reusable reference so that we don't
 
 const db = firebase.firestore()
 
+const storage = firebase.storage()
+
 const usersCollection = db.collection('users')
 
-export { auth, db, usersCollection }
+export { auth, db, usersCollection, storage }
