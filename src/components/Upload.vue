@@ -40,7 +40,7 @@
 </template>
 
 <script>
-import { storage } from '@/includes/firebase'
+import { storage, auth, songsCollection } from '@/includes/firebase'
 export default {
   name: 'AppUpload',
   data() {
@@ -91,8 +91,20 @@ export default {
             this.uploads[uploadIndex].text_class = 'text-red-400'
             console.log(error)
           },
-          () => {
+          async () => {
             //this fourth argument is called when the upload is a success
+            console.log(auth)
+            const song = {
+              uid: auth.currentUser.uid,
+              display_name: auth.currentUser.displayName,
+              original_name: task.snapshot.ref.name,
+              modified_name: task.snapshot.ref.name, // The modified name is used to change the name, so that we do not have to change the file name in storage, thereby making 2 requests
+              genre: '',
+              comments_count: 0
+            }
+            song.url = await task.snapshot.ref.getDownloadURL()
+            const result = await songsCollection.add(song)
+            console.log(result)
             this.uploads[uploadIndex].variant = 'bg-green-400'
             this.uploads[uploadIndex].icon = 'fas fa-check'
             this.uploads[uploadIndex].text_class = 'text-green-400'
