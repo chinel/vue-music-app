@@ -19,6 +19,7 @@
       >
         <h5>Drop your files here</h5>
       </div>
+      <input type="file" multiple @change="uploadMusic($event)" />
       <hr class="my-6" />
       <!-- Progess Bars -->
       <div class="mb-4" v-for="upload in uploads" :key="upload.name">
@@ -40,7 +41,7 @@
 </template>
 
 <script>
-import { storage } from '@/includes/firebase'
+import { storage, auth, songsCollection } from '@/includes/firebase'
 export default {
   name: 'AppUpload',
   data() {
@@ -51,11 +52,12 @@ export default {
   },
   methods: {
     uploadMusic($event) {
+      // console.log($event)
       this.is_dragover = false
       //const { files } = $event.dataTransfer
       //   console.log($event)
       //   console.log(files)
-      const files = [...$event.dataTransfer.files]
+      const files = $event.dataTransfer ? [...$event.dataTransfer.files] : [...$event.target.files]
       console.log(files)
       files.forEach((file) => {
         if (file.type !== 'audio/mpeg') {
@@ -91,8 +93,20 @@ export default {
             this.uploads[uploadIndex].text_class = 'text-red-400'
             console.log(error)
           },
-          () => {
+          async () => {
             //this fourth argument is called when the upload is a success
+            console.log(auth)
+            const song = {
+              uid: auth.currentUser.uid,
+              display_name: auth.currentUser.displayName,
+              original_name: task.snapshot.ref.name,
+              modified_name: task.snapshot.ref.name, // The modified name is used to change the name, so that we do not have to change the file name in storage, thereby making 2 requests
+              genre: '',
+              comments_count: 0
+            }
+            song.url = await task.snapshot.ref.getDownloadURL()
+            const result = await songsCollection.add(song)
+            console.log(result)
             this.uploads[uploadIndex].variant = 'bg-green-400'
             this.uploads[uploadIndex].icon = 'fas fa-check'
             this.uploads[uploadIndex].text_class = 'text-green-400'
