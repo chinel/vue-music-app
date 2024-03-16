@@ -113,7 +113,17 @@ export default {
           }
         ) // this will let us know the progress of the upload, if it succeeded or failed
       })
+    },
+    cancelUploads() {
+      this.uploads.forEach((upload) => {
+        upload.task.cancel()
+      })
     }
+  },
+  beforeUnmount() {
+    this.uploads.forEach((upload) => {
+      upload.task.cancel()
+    })
   }
 }
 </script>
