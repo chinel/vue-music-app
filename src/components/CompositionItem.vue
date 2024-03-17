@@ -139,7 +139,7 @@ export default {
 
       await songsCollection.doc(this.song.docID).delete()
 
-      this.removeSong(this.index)
+      //this.removeSong(this.index) // we won't need this since we are using a listener
     }
   }
 }

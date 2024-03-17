@@ -45,14 +45,16 @@ export default {
     }
   },
   async created() {
-    const snapshot = await songsCollection.where('uid', '==', auth.currentUser.uid).get()
-    snapshot.forEach((document) => {
-      const song = {
-        ...document.data(),
-        docID: document.id
-      }
+    songsCollection.where('uid', '==', auth.currentUser.uid).onSnapshot((snapshot) => {
+      this.songs = []
+      snapshot.forEach((document) => {
+        const song = {
+          ...document.data(),
+          docID: document.id
+        }
 
-      this.songs.push(song)
+        this.songs.push(song)
+      })
     })
   },
   methods: {
