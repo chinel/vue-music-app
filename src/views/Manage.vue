@@ -17,6 +17,7 @@
               v-for="(song, i) in songs"
               :key="song.docID"
               :updateSong="updateSong"
+              :removeSong="removeSong"
               :song="song"
               :index="i"
             />
@@ -58,6 +59,9 @@ export default {
     updateSong(i, values) {
       this.songs[i].modified_name = values.modified_name
       this.songs[i].genre = values.genre
+    },
+    removeSong(i) {
+      this.songs.splice(i, 1)
     }
   }
   // beforeRouteLeave(to, from, next) {
