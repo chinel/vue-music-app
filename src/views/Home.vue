@@ -48,21 +48,59 @@ export default {
   },
   data() {
     return {
-      songs: []
+      songs: [],
+      maxPerPage: 3,
+      pendingRequest: false
     }
   },
   async created() {
-    songsCollection.onSnapshot((snapshot) => {
-      this.songs = []
-      snapshot.forEach((document) => {
-        const song = {
-          docID: document.id,
-          ...document.data()
-        }
+    this.getSongs()
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  beforeUnmount() {
+    window.removeEventListener('scroll', this.handleScroll)
+  },
+  methods: {
+    async handleScroll() {
+      const { scrollTop, offsetHeight } = document.documentElement
+      const { innerHeight } = window
 
-        this.songs.push(song)
+      const bottomOfWindow = Math.round(scrollTop) + innerHeight === offsetHeight // the value of the scroll top is always a decimal, so we need it in a whole number
+      if (bottomOfWindow) {
+        await this.getSongs()
+      }
+    },
+    async getSongs() {
+      if (this.pendingRequest) {
+        return
+      }
+
+      this.pendingRequest = true
+
+      let songsQuery = songsCollection.orderBy('modified_name').limit(this.maxPerPage)
+
+      if (this.songs.length) {
+        const lastDoc = await songsCollection.doc(this.songs[this.songs.length - 1].docID).get()
+
+        songsQuery = songsCollection
+          .orderBy('modified_name')
+          .startAfter(lastDoc)
+          .limit(this.maxPerPage)
+      }
+      await songsQuery.onSnapshot((snapshot) => {
+        // this.songs = []
+        snapshot.forEach((document) => {
+          const song = {
+            docID: document.id,
+            ...document.data()
+          }
+
+          this.songs.push(song)
+        })
+
+        this.pendingRequest = false
       })
-    })
+    }
   }
 }
 </script>
