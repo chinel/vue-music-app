@@ -165,7 +165,6 @@ export default {
   },
   async created() {
     const docSnapshot = await songsCollection.doc(this.$route.params.id).get()
-    console.log(docSnapshot.data())
     if (!docSnapshot.exists) {
       this.$router.push({ name: 'home' })
       return
