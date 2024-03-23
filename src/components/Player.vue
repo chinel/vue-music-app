@@ -17,7 +17,10 @@
       <!-- Current Position -->
       <div class="player-currenttime">{{ seek }}</div>
       <!-- Scrub Container  -->
-      <div class="w-full h-2 rounded bg-gray-200 relative cursor-pointer">
+      <div
+        @click.prevent="updateSeek"
+        class="w-full h-2 rounded bg-gray-200 relative cursor-pointer"
+      >
         <!-- Player Ball -->
         <span
           class="absolute -top-2.5 -ml-2.5 text-gray-800 text-lg"
@@ -46,7 +49,7 @@ export default {
     ...mapState(usePlayerStore, ['playing', 'seek', 'duration', 'playerProgress', 'currentSong'])
   },
   methods: {
-    ...mapActions(usePlayerStore, ['toggleAudio'])
+    ...mapActions(usePlayerStore, ['toggleAudio', 'updateSeek'])
   }
 }
 </script>
