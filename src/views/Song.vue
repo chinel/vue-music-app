@@ -8,6 +8,7 @@
     <div class="container mx-auto flex items-center">
       <!-- Play/Pause Button -->
       <button
+        @click.prevent="newSong(song)"
         type="button"
         class="z-50 h-24 w-24 text-3xl bg-white text-black rounded-full focus:outline-none"
       >
@@ -88,8 +89,10 @@
 
 <script>
 import { songsCollection, auth, commentsCollection } from '@/includes/firebase'
-import { mapState } from 'pinia'
+import { mapState, mapActions } from 'pinia'
 import useUserStore from '@/stores/user'
+import usePlayerStore from '@/stores/player'
+
 export default {
   name: 'AppSong',
   data() {
@@ -125,10 +128,15 @@ export default {
       return
     }
 
+    const { sort } = this.$route.query
+
+    this.sort = sort === '1' || sort === '2' ? sort : '1'
+
     this.song = docSnapshot.data()
     await this.getComments()
   },
   methods: {
+    ...mapActions(usePlayerStore, ['newSong']),
     async addComment(values, context) {
       this.comment_in_submission = true
       this.comment_show_alert = true
@@ -144,6 +152,11 @@ export default {
       }
 
       await commentsCollection.add(comment)
+
+      this.song.comment_count += 1
+      await songsCollection
+        .doc(this.$route.params.id)
+        .update({ comment_count: this.song.comment_count })
       this.comment_in_submission = false
       this.comment_alert_variant = 'bg-green-500'
       this.comment_alert_msg = 'Comment added!'
@@ -162,6 +175,19 @@ export default {
 
           this.comments.push(comment)
         })
+      })
+    }
+  },
+  watch: {
+    sort(newVal) {
+      // this will prevent the watcher from updating the route if the query parameter matches the sort value
+      if (newVal === this.$route.query.sort) {
+        return
+      }
+      this.$router.push({
+        query: {
+          sort: newVal
+        }
       })
     }
   }
