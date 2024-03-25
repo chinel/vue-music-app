@@ -58,7 +58,7 @@ export default {
       //   console.log($event)
       //   console.log(files)
       const files = $event.dataTransfer ? [...$event.dataTransfer.files] : [...$event.target.files]
-      console.log(files)
+      //console.log(files)
       files.forEach((file) => {
         if (file.type !== 'audio/mpeg') {
           return
