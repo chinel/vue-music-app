@@ -155,10 +155,10 @@ export default {
 
       await commentsCollection.add(comment)
 
-      this.song.comment_count += 1
+      this.song.comments_count += 1
       await songsCollection
         .doc(this.$route.params.id)
-        .update({ comment_count: this.song.comment_count })
+        .update({ comments_count: this.song.comments_count })
       this.comment_in_submission = false
       this.comment_alert_variant = 'bg-green-500'
       this.comment_alert_msg = 'Comment added!'
