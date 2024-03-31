@@ -7,5 +7,19 @@ export default createI18n({
   messages: {
     en, // same as en:{}
     fr // for french
-  } // this contains a list of translations for our app
+  }, // this contains a list of translations for our app
+  numberFormats: {
+    en: {
+      currency: {
+        style: 'currency', // the number will be formatted to a currency,
+        currency: 'USD'
+      }
+    },
+    ja: {
+      currency: {
+        style: 'currency',
+        currency: 'JPY'
+      }
+    } // for japanese
+  }
 })
