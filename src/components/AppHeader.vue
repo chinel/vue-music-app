@@ -31,6 +31,12 @@
               <a class="px-2 text-white" href="#" @click.prevent="signOut">Logout</a>
             </li>
           </template>
+
+          <li>
+            <a class="px-2 text-white" href="#" @click.prevent="changeLocale">
+              {{ currentLocale }}
+            </a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -46,7 +52,10 @@ export default {
   name: 'AppHeader',
   computed: {
     ...mapStores(useModalStore, useUserStore),
-    ...mapWritableState(useModalStore, ['isOpen'])
+    ...mapWritableState(useModalStore, ['isOpen']),
+    currentLocale() {
+      return this.$i18n.locale === 'fr' ? ' English' : 'French'
+    }
   },
   methods: {
     toggleAuthModal() {
@@ -60,6 +69,9 @@ export default {
           name: 'home'
         })
       }
+    },
+    changeLocale() {
+      this.$i18n.locale = this.$i18n.locale === 'fr' ? 'en' : 'fr'
     }
   }
 }
