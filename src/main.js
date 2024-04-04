@@ -3,6 +3,7 @@ import './assets/main.css'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
+// import { registerSw } from 'virtual:pwa-register'
 
 import App from './App.vue'
 import router from './router'
@@ -10,6 +11,8 @@ import VeeValidatePlugin from './includes/validation'
 import { auth } from './includes/firebase'
 import i18n from './includes/i18n'
 import Icon from './directives/icons'
+
+// registerSw({ immediate: true })
 
 let app
 
