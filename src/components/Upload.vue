@@ -63,6 +63,19 @@ export default {
         if (file.type !== 'audio/mpeg') {
           return
         }
+
+        if (!navigator.onLine) {
+          this.uploads.push({
+            task: {},
+            current_progress: 100,
+            name: file.name,
+            variant: 'bg-red-400',
+            icon: 'fas fa-times',
+            text_class: 'text-red-400'
+          })
+          return
+        }
+
         const uniqueFileName = `${Date.now()}_${Math.random().toString(36).substring(2)}`
         const storageRef = storage.ref() // bucket url vue-music-app-65268.appspot.com
         const songsRef = storageRef.child(`songs/${uniqueFileName}_${file.name}`) //  vue-music-app-65268.appspot.com/songs/example.mp3
