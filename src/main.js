@@ -12,8 +12,12 @@ import { auth } from './includes/firebase'
 import i18n from './includes/i18n'
 import Icon from './directives/icons'
 import GlobalComponents from './includes/_globals'
+import progressBar from './includes/progress-bar'
+import 'nprogress/nprogress.css'
 
 // registerSw({ immediate: true })
+
+progressBar(router) // here we will pass the router object to have access to its properties in the file
 
 let app
 
