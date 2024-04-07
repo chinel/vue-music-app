@@ -1,4 +1,7 @@
-import _ from 'lodash' // vite uses lodash internally
+//import _ from 'lodash' // vite uses lodash internally
+import camelCase from 'lodash/camelCase'
+import upperFirst from 'lodash/upperFirst'
+
 export default {
   install(app) {
     //search for the files
@@ -10,8 +13,8 @@ export default {
     //path provides the path
     //module provides the data
     Object.entries(baseComponents).forEach(([path, module]) => {
-      const componentName = _.upperFirst(
-        _.camelCase(
+      const componentName = upperFirst(
+        camelCase(
           path
             .split('/')
             .pop()
