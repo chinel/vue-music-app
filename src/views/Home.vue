@@ -10,8 +10,7 @@
         <div class="text-white main-header-content">
           <h1 class="font-bold text-5xl mb-5">{{ $t('home.listen') }}</h1>
           <p class="w-full md:w-8/12 mx-auto">
-            Feeling stressed? Let the power of melody wash over you. It's time to Listen to Great
-            Music!
+            {{ $t('home.intro') }}
           </p>
         </div>
       </div>
