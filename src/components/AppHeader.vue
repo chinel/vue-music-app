@@ -14,9 +14,9 @@
       <div class="flex items-center">
         <!-- Primary Navigation -->
         <ul class="flex flex-row mt-1">
-          <li>
+          <!-- <li>
             <router-link class="px-2 text-white" :to="{ name: 'about' }">About</router-link>
-          </li>
+          </li> -->
           <!-- Navigation Links -->
           <li v-if="!userStore.userLoggedIn">
             <a class="px-2 text-white" href="#" @click.prevent="toggleAuthModal"
