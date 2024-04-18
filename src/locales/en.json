@@ -1,7 +1,8 @@
 {
   "home": {
     "listen": "Listen to Great Music!",
-    "intro": "Feeling stressed? Let the power of melody wash over you. It's time to Listen to Great Music!"
+    "intro": "Feeling stressed? Let the power of melody wash over you. It's time to Listen to Great Music!",
+    "cardTitle": "Songs"
   },
   "song": {
     "comment_count": "No comments | 1 comment |{count} comments"
