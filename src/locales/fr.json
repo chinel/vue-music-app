@@ -5,7 +5,8 @@
     "cardTitle": "Chansons"
   },
   "song": {
-    "comment_count": "Sans commentaires | 1 commentaire |{count} commentaires"
+    "comment_count": "Sans commentaires | 1 commentaire |{count} commentaires",
+    "submit-btn": "Soumettre"
   },
   "register": {
     "accept": "J'accepte les musiques {0}",
