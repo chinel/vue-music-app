@@ -59,7 +59,7 @@
                 class="py-1.5 px-3 rounded text-white bg-green-600 block"
                 :disabled="comment_in_submission"
               >
-                Submit
+                {{ $t('song.submit-btn') }}
               </button>
             </vee-form>
           </div>
