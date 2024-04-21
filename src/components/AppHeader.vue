@@ -28,7 +28,9 @@
               <router-link class="px-2 text-white" :to="{ name: 'manage' }">Manage</router-link>
             </li>
             <li>
-              <a class="px-2 text-white" href="#" @click.prevent="signOut">Logout</a>
+              <a class="px-2 text-white" href="#" @click.prevent="signOut">{{
+                $t('home.menuLogout')
+              }}</a>
             </li>
           </template>
 
