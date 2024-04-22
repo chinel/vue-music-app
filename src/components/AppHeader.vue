@@ -25,7 +25,9 @@
           </li>
           <template v-else>
             <li>
-              <router-link class="px-2 text-white" :to="{ name: 'manage' }">Manage</router-link>
+              <router-link class="px-2 text-white" :to="{ name: 'manage' }">{{
+                $t('home.menuManage')
+              }}</router-link>
             </li>
             <li>
               <a class="px-2 text-white" href="#" @click.prevent="signOut">{{
