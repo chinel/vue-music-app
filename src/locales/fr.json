@@ -3,7 +3,8 @@
     "listen": "Écoutez de la bonne musique !",
     "intro": "Se sentir stressé? Laissez le pouvoir de la mélodie vous envahir. Il est temps d'écouter de la bonne musique !",
     "cardTitle": "Chansons",
-    "menuLogout": "Se déconnecter"
+    "menuLogout": "Se déconnecter",
+    "menuManage": "Gérer"
   },
   "song": {
     "comment_count": "Sans commentaires | 1 commentaire |{count} commentaires",
