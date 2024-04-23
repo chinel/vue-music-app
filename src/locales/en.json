@@ -4,7 +4,8 @@
     "intro": "Feeling stressed? Let the power of melody wash over you. It's time to Listen to Great Music!",
     "cardTitle": "Songs",
     "menuLogout": "Logout",
-    "menuManage": "Manage"
+    "menuManage": "Manage",
+    "menuAuth": "Login / Register"
   },
   "song": {
     "comment_count": "No comments | 1 comment |{count} comments",

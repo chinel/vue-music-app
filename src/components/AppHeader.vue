@@ -19,9 +19,9 @@
           </li> -->
           <!-- Navigation Links -->
           <li v-if="!userStore.userLoggedIn">
-            <a class="px-2 text-white" href="#" @click.prevent="toggleAuthModal"
-              >Login / Register</a
-            >
+            <a class="px-2 text-white" href="#" @click.prevent="toggleAuthModal">{{
+              $t('home.menuAuth')
+            }}</a>
           </li>
           <template v-else>
             <li>
