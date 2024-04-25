@@ -17,5 +17,8 @@
   },
   "manage": {
     "my_songs": "Mes chansons"
+  },
+  "auth": {
+    "header": "Votre compte"
   }
 }
