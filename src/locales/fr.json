@@ -19,6 +19,7 @@
     "my_songs": "Mes chansons"
   },
   "auth": {
-    "header": "Votre compte"
+    "header": "Votre compte",
+    "loginTab": "Se connecter"
   }
 }
