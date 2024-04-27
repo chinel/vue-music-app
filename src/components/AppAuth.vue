@@ -48,7 +48,7 @@
                   ' hover:text-white text-white bg-blue-600': tab === 'register',
                   'hover:text-blue-600': tab === 'login'
                 }"
-                >Register</a
+                >{{ $t('auth.registerTab') }}</a
               >
             </li>
           </ul>

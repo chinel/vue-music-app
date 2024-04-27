@@ -20,6 +20,7 @@
   },
   "auth": {
     "header": "Votre compte",
-    "loginTab": "Se connecter"
+    "loginTab": "Se connecter",
+    "registerTab": "Registre"
   }
 }
