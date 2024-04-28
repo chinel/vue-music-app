@@ -23,6 +23,9 @@
     "loginTab": "Se connecter",
     "registerTab": "Registre"
   },
+  "loginForm": {
+    "emailLabel": "E-mail"
+  },
   "songForm": {
     "titleLabel": "Titre de la chanson"
   }

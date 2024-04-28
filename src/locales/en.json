@@ -23,6 +23,10 @@
     "loginTab": "Login",
     "registerTab": "Register"
   },
+  "loginForm": {
+    "emailLabel": "Email"
+  },
+
   "songForm": {
     "titleLabel": "Song Title"
   }
