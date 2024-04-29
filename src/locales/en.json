@@ -22,5 +22,8 @@
     "header": "Your Account",
     "loginTab": "Login",
     "registerTab": "Register"
+  },
+  "songForm": {
+    "titleLabel": "Song Title"
   }
 }
