@@ -24,7 +24,8 @@
     "registerTab": "Register"
   },
   "loginForm": {
-    "emailLabel": "Email"
+    "emailLabel": "Email",
+    "passwordLabel": "Password"
   },
 
   "songForm": {
