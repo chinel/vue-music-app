@@ -24,7 +24,10 @@
     "registerTab": "Registre"
   },
   "loginForm": {
-    "emailLabel": "E-mail"
+    "emailLabel": "E-mail",
+    "passwordLabel": "Mot de passe",
+    "emailPlaceholder": "Entrez l'e-mail",
+    "passwordPlaceholder": "Mot de passe"
   },
   "songForm": {
     "titleLabel": "Titre de la chanson"
