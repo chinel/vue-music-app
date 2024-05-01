@@ -25,7 +25,9 @@
   },
   "loginForm": {
     "emailLabel": "E-mail",
-    "passwordLabel": "Mot de passe"
+    "passwordLabel": "Mot de passe",
+    "emailPlaceholder": "Entrez l'e-mail",
+    "passwordPlaceholder": "Mot de passe"
   },
   "songForm": {
     "titleLabel": "Titre de la chanson"

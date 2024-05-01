@@ -13,7 +13,7 @@
       <vee-field
         type="email"
         class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition duration-500 focus:outline-none focus:border-black rounded"
-        placeholder="Enter Email"
+        :placeholder="$t('loginForm.emailPlaceholder')"
         name="email"
       />
       <ErrorMessage class="text-red-600" name="email" />
@@ -24,7 +24,7 @@
       <vee-field
         type="password"
         class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition duration-500 focus:outline-none focus:border-black rounded"
-        placeholder="Password"
+        :placeholder="$t('loginForm.passwordPlaceholder')"
         name="password"
       />
       <ErrorMessage class="text-red-600" name="password" />

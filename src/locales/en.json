@@ -25,7 +25,9 @@
   },
   "loginForm": {
     "emailLabel": "Email",
-    "passwordLabel": "Password"
+    "passwordLabel": "Password",
+    "emailPlaceholder": "Enter Email",
+    "passwordPlaceholder": "Password"
   },
 
   "songForm": {
