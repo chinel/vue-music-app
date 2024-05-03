@@ -9,7 +9,7 @@
   <vee-form :validation-schema="schema" @submit="register" :initial-values="userData">
     <!-- Name -->
     <div class="mb-3">
-      <label class="inline-block mb-2">Name</label>
+      <label class="inline-block mb-2">{{ $t('register.nameLabel') }}</label>
       <vee-field
         name="name"
         type="text"
