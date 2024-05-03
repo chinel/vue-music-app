@@ -13,7 +13,8 @@
   },
   "register": {
     "accept": "J'accepte les musiques {0}",
-    "tos": "Conditions d'utilisation"
+    "tos": "Conditions d'utilisation",
+    "nameLabel": "Nom"
   },
   "manage": {
     "my_songs": "Mes chansons"
