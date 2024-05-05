@@ -15,7 +15,8 @@
     "accept": "J'accepte les musiques {0}",
     "tos": "Conditions d'utilisation",
     "nameLabel": "Nom",
-    "namePlaceholder": "Entrez le nom"
+    "namePlaceholder": "Entrez le nom",
+    "emailLabel": "E-mail"
   },
   "manage": {
     "my_songs": "Mes chansons"
