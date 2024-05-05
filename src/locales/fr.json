@@ -14,7 +14,8 @@
   "register": {
     "accept": "J'accepte les musiques {0}",
     "tos": "Conditions d'utilisation",
-    "nameLabel": "Nom"
+    "nameLabel": "Nom",
+    "namePlaceholder": "Entrez le nom"
   },
   "manage": {
     "my_songs": "Mes chansons"
