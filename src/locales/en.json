@@ -34,6 +34,7 @@
   },
 
   "songForm": {
-    "titleLabel": "Song Title"
+    "titleLabel": "Song Title",
+    "titlePlaceholder": "Enter Song Title"
   }
 }
