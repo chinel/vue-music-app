@@ -33,6 +33,7 @@
     "passwordPlaceholder": "Mot de passe"
   },
   "songForm": {
-    "titleLabel": "Titre de la chanson"
+    "titleLabel": "Titre de la chanson",
+    "titlePlaceholder": "Entrez le titre de la chanson"
   }
 }
