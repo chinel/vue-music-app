@@ -35,6 +35,8 @@
 
   "songForm": {
     "titleLabel": "Song Title",
-    "titlePlaceholder": "Enter Song Title"
+    "titlePlaceholder": "Enter Song Title",
+    "genreLabel": "Genre",
+    "genrePlaceholder": "Enter Genre"
   }
 }
