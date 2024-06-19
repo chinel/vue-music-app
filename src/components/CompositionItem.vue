@@ -36,7 +36,7 @@
           <ErrorMessage class="text-red-600" name="name" />
         </div>
         <div class="mb-3">
-          <label class="inline-block mb-2">Genre</label>
+          <label class="inline-block mb-2">{{ $t('songForm.genreLabel') }}</label>
           <vee-field
             name="genre"
             type="text"
