@@ -51,7 +51,7 @@
           class="py-1.5 px-3 rounded text-white bg-green-600"
           :disabled="in_submission"
         >
-          Submit
+          {{ $t('song.submit-btn') }}
         </button>
         <button
           type="button"
@@ -59,7 +59,7 @@
           :disabled="in_submission"
           @click.prevent="showForm = false"
         >
-          Go Back
+          {{ $t('song.back-btn') }}
         </button>
       </vee-form>
     </div>
