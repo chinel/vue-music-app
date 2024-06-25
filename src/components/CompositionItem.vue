@@ -59,7 +59,7 @@
           :disabled="in_submission"
           @click.prevent="showForm = false"
         >
-          Go Back
+          {{ $t('song.back-btn') }}
         </button>
       </vee-form>
     </div>

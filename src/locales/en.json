@@ -9,7 +9,8 @@
   },
   "song": {
     "comment_count": "No comments | 1 comment |{count} comments",
-    "submit-btn": "Submit"
+    "submit-btn": "Submit",
+    "back-btn": "Go Back"
   },
   "register": {
     "accept": "I accept Music's {0}",
