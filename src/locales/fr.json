@@ -17,7 +17,8 @@
     "tos": "Conditions d'utilisation",
     "nameLabel": "Nom",
     "namePlaceholder": "Entrez le nom",
-    "ageLabel": "Âge"
+    "ageLabel": "Âge",
+    "confirmPassword": "Confirmez le mot de passe"
   },
   "manage": {
     "my_songs": "Mes chansons"
