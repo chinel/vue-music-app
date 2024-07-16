@@ -17,7 +17,8 @@
     "tos": "Terms of Service",
     "nameLabel": "Name",
     "namePlaceholder": "Enter Name",
-    "ageLabel": "Age"
+    "ageLabel": "Age",
+    "confirmPassword": "Confirm Password"
   },
   "manage": {
     "my_songs": "My Songs"
