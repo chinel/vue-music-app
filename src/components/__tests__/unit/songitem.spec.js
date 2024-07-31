@@ -18,7 +18,6 @@ describe('SongItem.vue', () => {
         }
       }
     })
-    console.log('song-->', wrapper.text())
 
     const compositionAuthor = wrapper.find('.text-gray-500')
     expect(compositionAuthor.text()).toBe(song.display_name) // this returns a specific element
