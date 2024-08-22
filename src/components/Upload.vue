@@ -93,7 +93,7 @@ export default {
         task.on(
           'state_changed',
           (snapshot) => {
-            console.log(snapshot)
+            //console.log(snapshot)
             // it is important to use arrow function here to be able to access the this keyword because it is not bound to the component's instance
             const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100
             this.uploads[uploadIndex].current_progress = progress
