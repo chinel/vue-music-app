@@ -39,5 +39,8 @@
     "titlePlaceholder": "Entrez le titre de la chanson",
     "genreLabel": "Genre",
     "genrePlaceholder": "Entrez le genre"
+  },
+  "upload": {
+    "title": "Subir"
   }
 }
