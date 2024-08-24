@@ -17,7 +17,7 @@
         @dragleave.prevent.stop="is_dragover = false"
         @drop.prevent.stop="uploadMusic($event)"
       >
-        <h5>Drop your files here</h5>
+        <h5>{{ $t('upload.upload-label') }}</h5>
       </div>
       <input type="file" multiple @change="uploadMusic($event)" />
       <hr class="my-6" />

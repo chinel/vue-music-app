@@ -42,6 +42,7 @@
     "genrePlaceholder": "Enter Genre"
   },
   "upload": {
-    "title": "Upload"
+    "title": "Upload",
+    "upload-label": "Drop your files here"
   }
 }

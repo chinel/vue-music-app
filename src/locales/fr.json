@@ -41,6 +41,7 @@
     "genrePlaceholder": "Entrez le genre"
   },
   "upload": {
-    "title": "Subir"
+    "title": "Subir",
+    "upload-label": "Deja tus archivos aquí"
   }
 }
