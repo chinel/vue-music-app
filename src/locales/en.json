@@ -40,5 +40,9 @@
     "titlePlaceholder": "Enter Song Title",
     "genreLabel": "Genre",
     "genrePlaceholder": "Enter Genre"
+  },
+  "upload": {
+    "title": "Upload",
+    "upload-label": "Drop your files here"
   }
 }

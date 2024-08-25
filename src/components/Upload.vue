@@ -1,7 +1,7 @@
 <template>
   <div class="bg-white rounded border border-gray-200 relative flex flex-col">
     <div class="px-6 pt-6 pb-5 font-bold border-b border-gray-200">
-      <span class="card-title">Upload</span>
+      <span class="card-title">{{ $t('upload.title') }}</span>
       <i class="fas fa-upload float-right text-green-400 text-2xl"></i>
     </div>
     <div class="p-6">
@@ -17,7 +17,7 @@
         @dragleave.prevent.stop="is_dragover = false"
         @drop.prevent.stop="uploadMusic($event)"
       >
-        <h5>Drop your files here</h5>
+        <h5>{{ $t('upload.upload-label') }}</h5>
       </div>
       <input type="file" multiple @change="uploadMusic($event)" />
       <hr class="my-6" />
@@ -93,7 +93,7 @@ export default {
         task.on(
           'state_changed',
           (snapshot) => {
-            console.log(snapshot)
+            //console.log(snapshot)
             // it is important to use arrow function here to be able to access the this keyword because it is not bound to the component's instance
             const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100
             this.uploads[uploadIndex].current_progress = progress
