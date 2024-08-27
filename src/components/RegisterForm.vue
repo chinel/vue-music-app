@@ -69,7 +69,7 @@
     </div>
     <!-- Country -->
     <div class="mb-3">
-      <label class="inline-block mb-2">Country</label>
+      <label class="inline-block mb-2">{{ $t('register.countryLabel') }}</label>
       <vee-field
         as="select"
         class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition duration-500 focus:outline-none focus:border-black rounded"

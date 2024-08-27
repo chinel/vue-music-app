@@ -18,7 +18,8 @@
     "nameLabel": "Name",
     "namePlaceholder": "Enter Name",
     "ageLabel": "Age",
-    "confirmPassword": "Confirm Password"
+    "confirmPassword": "Confirm Password",
+    "countryLabel": "Country"
   },
   "manage": {
     "my_songs": "My Songs"
