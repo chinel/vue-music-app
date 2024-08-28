@@ -18,7 +18,8 @@
     "nameLabel": "Nom",
     "namePlaceholder": "Entrez le nom",
     "ageLabel": "Âge",
-    "confirmPassword": "Confirmez le mot de passe"
+    "confirmPassword": "Confirmez le mot de passe",
+    "countryLabel": "Pays"
   },
   "manage": {
     "my_songs": "Mes chansons"
@@ -41,7 +42,7 @@
     "genrePlaceholder": "Entrez le genre"
   },
   "upload": {
-    "title": "Subir",
-    "upload-label": "Deja tus archivos aquí"
+    "title": "Télécharger",
+    "upload-label": "Déposez vos fichiers ici"
   }
 }
