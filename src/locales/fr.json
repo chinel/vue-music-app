@@ -19,7 +19,8 @@
     "namePlaceholder": "Entrez le nom",
     "ageLabel": "Âge",
     "confirmPassword": "Confirmez le mot de passe",
-    "countryLabel": "Pays"
+    "countryLabel": "Pays",
+    "countrySelect": "Sélectionnez un pays"
   },
   "manage": {
     "my_songs": "Mes chansons"

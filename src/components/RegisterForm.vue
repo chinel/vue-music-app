@@ -75,7 +75,7 @@
         class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition duration-500 focus:outline-none focus:border-black rounded"
         name="country"
       >
-        <option value="">Select Country</option>
+        <option value="">{{ $t('register.countrySelect') }}</option>
         <option value="USA">USA</option>
         <option value="Mexico">Mexico</option>
         <option value="Germany">Germany</option>
