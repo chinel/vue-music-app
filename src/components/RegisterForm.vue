@@ -103,7 +103,7 @@
       :disabled="reg_in_submission"
       :class="btnStateClass"
     >
-      Submit
+      {{ $t('song.submit-btn') }}
     </button>
   </vee-form>
 </template>
