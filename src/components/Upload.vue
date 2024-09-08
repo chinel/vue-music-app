@@ -107,7 +107,7 @@ export default {
           },
           async () => {
             //this fourth argument is called when the upload is a success
-            console.log(auth)
+            // console.log(auth)
             const song = {
               uid: auth.currentUser.uid,
               display_name: auth.currentUser.displayName,
