@@ -45,5 +45,8 @@
   "upload": {
     "title": "Télécharger",
     "upload-label": "Déposez vos fichiers ici"
+  },
+  "player": {
+    "by": "par"
   }
 }

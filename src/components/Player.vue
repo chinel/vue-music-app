@@ -3,7 +3,8 @@
   <div class="fixed bottom-0 left-0 bg-white px-4 py-2 w-full">
     <!-- Track Info -->
     <div class="text-center" v-if="currentSong.modified_name">
-      <span class="song-title font-bold">{{ currentSong.modified_name }}</span> by
+      <span class="song-title font-bold">{{ currentSong.modified_name }}</span>
+      {{ $t('player.by') }}
       <span class="song-artist">{{ currentSong.display_name }}</span>
     </div>
     <div class="flex flex-nowrap gap-4 items-center">
