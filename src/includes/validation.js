@@ -50,7 +50,7 @@ export default {
           tos: 'You must accept the Terms of Service.'
         }
 
-        console.log(ctx)
+        //   console.log(ctx)
         const message = messages[ctx.rule.name]
           ? messages[ctx.rule.name]
           : `The field ${ctx.field} is invalid.`
