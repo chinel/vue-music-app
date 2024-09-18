@@ -34,7 +34,8 @@
     "emailLabel": "E-mail",
     "passwordLabel": "Mot de passe",
     "emailPlaceholder": "Entrez l'e-mail",
-    "passwordPlaceholder": "Mot de passe"
+    "passwordPlaceholder": "Mot de passe",
+    "alert_msg": "Veuillez patienter !, nous vous connectons."
   },
   "songForm": {
     "titleLabel": "Titre de la chanson",
