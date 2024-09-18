@@ -34,7 +34,8 @@
     "emailLabel": "Email",
     "passwordLabel": "Password",
     "emailPlaceholder": "Enter Email",
-    "passwordPlaceholder": "Password"
+    "passwordPlaceholder": "Password",
+    "alert_msg": "Please wait!, we are logging you in."
   },
 
   "songForm": {

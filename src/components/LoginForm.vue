@@ -56,7 +56,7 @@ export default {
       login_in_submission: false,
       login_show_alert: false,
       login_alert_variant: 'bg-blue-500',
-      login_alert_msg: 'Please wait!, we are logging you in.'
+      login_alert_msg: this.$t('loginForm.alert_msg')
     }
   },
   methods: {
