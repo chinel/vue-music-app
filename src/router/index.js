@@ -28,7 +28,7 @@ const routes = [
     component: Manage,
     name: 'manage',
     beforeEnter: (to, from, next) => {
-      console.log('Manage Auth Guard Record..')
+      //console.log('Manage Auth Guard Record..')
       next()
     },
     meta: {
