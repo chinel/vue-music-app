@@ -114,7 +114,7 @@ export default {
       this.in_submission = true
       this.show_alert = true
       this.alert_variant = 'bg-blue-500'
-      this.alert_message = 'Please wait! Updating song info.'
+      this.alert_message = this.$t('messages.edit_msg')
 
       try {
         await songsCollection.doc(this.song.docID).update({
