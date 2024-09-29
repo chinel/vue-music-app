@@ -49,5 +49,8 @@
   },
   "player": {
     "by": "par"
+  },
+  "messages": {
+    "edit_msg": "S'il vous plaît, attendez! Mise à jour des informations sur la chanson."
   }
 }

@@ -50,5 +50,8 @@
   },
   "player": {
     "by": "by"
+  },
+  "messages": {
+    "edit_msg": "Please wait! Updating song info."
   }
 }
