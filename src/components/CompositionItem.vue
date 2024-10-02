@@ -97,7 +97,7 @@ export default {
       in_submission: false,
       show_alert: false,
       alert_variant: 'bg-blue-500',
-      alert_message: 'Please wait! Updating song info.',
+      alert_message: this.$t('messages.edit_msg'),
       schema: {
         name: 'required|min:3|max:100',
         genre: 'alpha_spaces'

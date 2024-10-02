@@ -52,6 +52,7 @@
     "by": "by"
   },
   "messages": {
-    "edit_msg": "Please wait! Updating song info."
+    "edit_msg": "Please wait! Updating song info.",
+    "error_msg": "Something went wrong! Try again later."
   }
 }
