@@ -124,7 +124,7 @@ export default {
       } catch (error) {
         this.in_submission = true
         this.alert_variant = 'bg-red-500'
-        this.alert_message = 'Something went wrong! Try again later.'
+        this.alert_message = this.$t('Something went wrong! Try again later.')
         return
       }
 
