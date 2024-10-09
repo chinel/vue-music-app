@@ -53,6 +53,7 @@
   },
   "messages": {
     "edit_msg": "Please wait! Updating song info.",
-    "error_msg": "Something went wrong! Try again later."
+    "error_msg": "Something went wrong! Try again later.",
+    "success_msg": "Success!"
   }
 }

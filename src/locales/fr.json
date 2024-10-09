@@ -52,6 +52,7 @@
   },
   "messages": {
     "edit_msg": "S'il vous plaît, attendez! Mise à jour des informations sur la chanson.",
-    "error_msg": "Quelque chose s'est mal passé ! Réessayez plus tard."
+    "error_msg": "Quelque chose s'est mal passé ! Réessayez plus tard.",
+    "success_msg": "Succès!"
   }
 }
