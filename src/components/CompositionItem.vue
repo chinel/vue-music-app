@@ -135,7 +135,7 @@ export default {
       this.updateUnsavedFlag(false)
       this.in_submission = false
       this.alert_variant = 'bg-green-500'
-      this.alert_message = 'Success!'
+      this.alert_message = this.$t('Success!')
     },
     async deleteSong() {
       const storageRef = storage.ref()
