@@ -54,6 +54,7 @@
   "messages": {
     "edit_msg": "Please wait! Updating song info.",
     "error_msg": "Something went wrong! Try again later.",
-    "success_msg": "Success!"
+    "success_msg": "Success!",
+    "invalid_login": "Invalid Login Details."
   }
 }
