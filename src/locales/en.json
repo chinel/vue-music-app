@@ -55,6 +55,7 @@
     "edit_msg": "Please wait! Updating song info.",
     "error_msg": "Something went wrong! Try again later.",
     "success_msg": "Success!",
-    "invalid_login": "Invalid Login Details."
+    "invalid_login": "Invalid Login Details.",
+    "login_success": "Success! You are now logged in."
   }
 }

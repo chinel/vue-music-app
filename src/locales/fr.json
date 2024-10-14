@@ -54,6 +54,7 @@
     "edit_msg": "S'il vous plaît, attendez! Mise à jour des informations sur la chanson.",
     "error_msg": "Quelque chose s'est mal passé ! Réessayez plus tard.",
     "success_msg": "Succès!",
-    "invalid_login": "Détails de connexion invalides."
+    "invalid_login": "Détails de connexion invalides.",
+    "login_success": "Succès! Vous êtes maintenant connecté."
   }
 }
