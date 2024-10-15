@@ -70,7 +70,7 @@ export default {
       } catch (error) {
         this.login_in_submission = false
         this.login_alert_variant = 'bg-red-500'
-        this.login_alert_msg = 'Invalid Login Details.'
+        this.login_alert_msg = this.$t('Invalid Login Details.')
         return
       }
       this.login_alert_variant = 'bg-green-500'
