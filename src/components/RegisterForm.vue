@@ -150,7 +150,7 @@ export default {
       this.reg_show_alert = true
       this.reg_in_submission = true
       this.reg_alert_variant = 'bg-blue-500'
-      this.reg_alert_msg = 'Please wait! Your account is being created.'
+      this.reg_alert_msg = this.$t('Please wait! Your account is being created.')
 
       try {
         await this.createUser(values)

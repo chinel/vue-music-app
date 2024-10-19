@@ -55,6 +55,7 @@
     "error_msg": "Quelque chose s'est mal passé ! Réessayez plus tard.",
     "success_msg": "Succès!",
     "invalid_login": "Détails de connexion invalides.",
-    "login_success": "Succès! Vous êtes maintenant connecté."
+    "login_success": "Succès! Vous êtes maintenant connecté.",
+    "reg_alert_msg": "S'il vous plaît, attendez! Votre compte est en cours de création."
   }
 }
